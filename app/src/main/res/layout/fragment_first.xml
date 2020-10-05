@@ -27,7 +27,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textview_first" />
 
-    <com.example.myapplication.widget.FlatButton
+    <com.example.myapplication.widget.OutlineButton
         android:id="@+id/button_first1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -36,7 +36,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"/>
 
-    <com.example.myapplication.widget.TextButton
+    <com.example.myapplication.widget.FlatButton
         android:id="@+id/button_first2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
