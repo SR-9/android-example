@@ -46,8 +46,8 @@ object NetworkModule {
                 interceptors.forEach { interceptor ->
                     addNetworkInterceptor(interceptor)
                 }
-                val token = runBlocking { dataStore.getToken().first() }
                 addInterceptor { chain ->
+                    val token = runBlocking { dataStore.getToken().first() }
                     chain.proceed(
                         chain.request()
                             .newBuilder()
