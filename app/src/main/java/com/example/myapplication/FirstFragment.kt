@@ -7,19 +7,30 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.lifecycleScope
 import com.example.myapplication.component.BaseDialogFragment
+import com.example.myapplication.di.PrefDataStore
 import com.jakewharton.rxbinding4.view.clicks
 import com.trello.rxlifecycle4.android.lifecycle.kotlin.bindToLifecycle
+import dagger.hilt.android.AndroidEntryPoint
 import io.reactivex.rxjava3.kotlin.subscribeBy
 import io.reactivex.rxjava3.kotlin.toObservable
 import io.reactivex.rxjava3.subjects.PublishSubject
 import kotlinx.android.synthetic.main.fragment_first.*
+import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.flow.onCompletion
+import kotlinx.coroutines.launch
 import java.util.concurrent.TimeUnit
+import javax.inject.Inject
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
  */
+@AndroidEntryPoint
 class FirstFragment : Fragment() {
+
+    @Inject lateinit var dataStore: PrefDataStore
 
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
@@ -55,6 +66,12 @@ class FirstFragment : Fragment() {
         }
         button_first1.setOnClickListener {
             actionSubject.onNext(112312312)
+            lifecycleScope.launch {
+                dataStore.setToken("test")
+                val token = dataStore.getToken().first()
+                println(token)
+            }
+
         }
 
         button_first2.clicks()
