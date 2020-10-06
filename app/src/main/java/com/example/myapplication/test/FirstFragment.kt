@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.example.myapplication.test
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
+import com.example.myapplication.R
 import com.example.myapplication.component.BaseDialogFragment
 import com.example.myapplication.di.PrefDataStore
 import com.jakewharton.rxbinding4.view.clicks
@@ -17,9 +18,7 @@ import io.reactivex.rxjava3.kotlin.subscribeBy
 import io.reactivex.rxjava3.kotlin.toObservable
 import io.reactivex.rxjava3.subjects.PublishSubject
 import kotlinx.android.synthetic.main.fragment_first.*
-import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.flow.first
-import kotlinx.coroutines.flow.onCompletion
 import kotlinx.coroutines.launch
 import java.util.concurrent.TimeUnit
 import javax.inject.Inject
@@ -67,7 +66,7 @@ class FirstFragment : Fragment() {
         button_first1.setOnClickListener {
             actionSubject.onNext(112312312)
             lifecycleScope.launch {
-                dataStore.setToken("test")
+                dataStore.setToken("132131312245425345")
                 val token = dataStore.getToken().first()
                 println(token)
             }
@@ -77,6 +76,8 @@ class FirstFragment : Fragment() {
         button_first2.clicks()
             .bindToLifecycle(this)
             .throttleFirst(1, TimeUnit.SECONDS)
-            .subscribeBy {  }
+            .subscribeBy {
+                dataStore.printSomething()
+            }
     }
 }
