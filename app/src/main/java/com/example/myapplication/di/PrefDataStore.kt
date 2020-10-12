@@ -8,8 +8,8 @@ interface PrefDataStore {
 
     fun printSomething()
 
-    fun getToken() : Flow<String?>
+    fun getToken(): Flow<String?>
 
-     suspend fun setToken(token: String) : Preferences
+    suspend fun setToken(token: String): Preferences
 }
 

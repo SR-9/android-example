@@ -1,14 +1,11 @@
 package com.example.myapplication.component
 
-import android.app.Activity
-import android.content.Context
 import android.os.Bundle
 import android.view.*
 import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.DialogFragment
-import androidx.fragment.app.FragmentManager
 import com.example.myapplication.R
 import kotlinx.android.synthetic.main.dialog_view.view.*
 

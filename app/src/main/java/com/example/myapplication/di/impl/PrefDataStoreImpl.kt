@@ -14,7 +14,6 @@ import dagger.hilt.android.components.ApplicationComponent
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.flow.map
 import javax.inject.Inject
-import javax.inject.Singleton
 
 class PrefDataStoreImpl @Inject constructor(
     @ApplicationContext private val context: Context

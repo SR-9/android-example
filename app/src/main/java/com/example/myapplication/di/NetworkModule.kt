@@ -18,7 +18,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
 
-@Module()
+@Module
 @InstallIn(ApplicationComponent::class)
 object NetworkModule {
 
@@ -75,7 +75,7 @@ object NetworkModule {
         gsonConverterFactory: GsonConverterFactory,
         retrofitAdapter: RxJava3CallAdapterFactory
     ): Retrofit = Retrofit.Builder()
-        .baseUrl(" https://pokeapi.co/api/v2/")
+        .baseUrl("https://pokeapi.co/api/v2/")
         .client(okHttpClient)
         .addConverterFactory(gsonConverterFactory)
         .addCallAdapterFactory(retrofitAdapter)
