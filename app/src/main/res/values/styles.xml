@@ -1,4 +1,10 @@
 <resources>
+
+    <!--
+    Follow this common theme
+    https://medium.com/androiddevelopers/android-styling-common-theme-attributes-8f7c50c9eaba
+    -->
+
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
         <!-- Customize your theme here. -->
