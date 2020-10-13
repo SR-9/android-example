@@ -36,7 +36,7 @@ open class BaseDialogFragment(private val activity: AppCompatActivity, isCancel:
             dialog?.window?.setBackgroundDrawable(
                 ContextCompat.getDrawable(
                     activity,
-                    R.drawable.background_white_rounded_corner_8dp
+                    R.drawable.background_rounded_medium
                 )
             )
             setOnKeyListener { _, i, _ ->

@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+    <attr name="radiusSmall" format="dimension" />
+    <attr name="radiusMedium" type="dimension" />
+    <attr name="radiusLarge" type="dimension" />
+    <attr name="radius" type="dimension" />
 </resources>

@@ -7,13 +7,23 @@
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
+
+        <!-- Common color -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="colorError">@android:color/holo_red_dark</item>
         <item name="colorSurface">@color/colorSurface</item>
         <item name="android:colorBackground">@color/colorSurface</item>
+
+        <!-- Common radius -->
+        <item name="radiusSmall">@dimen/radiusSmall</item>
+        <item name="radiusMedium">@dimen/radiusMedium</item>
+        <item name="radiusLarge">@dimen/radiusLarge</item>
+        <item name="radius">?attr/radiusMedium</item>
+
+        <!-- Todo some other common -->
+
     </style>
 
     <style name="AppTheme.NoActionBar">

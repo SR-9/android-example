@@ -1,3 +1,6 @@
 <resources>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="radiusSmall">4dp</dimen>
+    <dimen name="radiusMedium">8dp</dimen>
+    <dimen name="radiusLarge">20dp</dimen>
 </resources>
