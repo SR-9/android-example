@@ -20,6 +20,7 @@
         android:visibility="gone"
         tools:visibility="visible"
         tools:text="TITLE"
+        android:textSize="16sp"
         />
 
     <androidx.appcompat.widget.LinearLayoutCompat
