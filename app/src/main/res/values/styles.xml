@@ -23,6 +23,9 @@
         <item name="radius">?attr/radiusMedium</item>
 
         <!-- Todo some other common -->
+        <item name="materialButtonStyle">@style/AppTheme.RaiseButton</item>
+        <item name="materialButtonOutlinedStyle">@style/AppTheme.OutlineButton</item>
+        <item name="borderlessButtonStyle">@style/AppTheme.FlatButton</item>
 
     </style>
 
@@ -34,5 +37,19 @@
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+    <style name="AppTheme.RaiseButton" parent="@style/Widget.MaterialComponents.Button"><!-- defStyleAttr: Int = R.attr.materialButtonStyle -->
+        <item name="cornerRadius">20dp</item>
+    </style>
+
+    <style name="AppTheme.OutlineButton" parent="@style/Widget.MaterialComponents.Button.OutlinedButton"><!-- defStyleAttr: Int = R.attr.materialButtonOutlinedStyle -->
+        <item name="cornerRadius">20dp</item>
+    </style>
+
+    <style name="AppTheme.FlatButton" parent="@style/Widget.MaterialComponents.Button.TextButton"><!-- defStyleAttr: Int = R.attr.borderlessButtonStyle -->
+        <item name="cornerRadius">20dp</item>
+        <item name="android:textColor">@android:color/holo_red_dark</item>
+    </style>
 
 </resources>
