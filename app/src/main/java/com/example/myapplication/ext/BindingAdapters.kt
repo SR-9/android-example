@@ -7,7 +7,7 @@ import kotlinx.coroutines.*
 //https://medium.com/swlh/android-click-debounce-80b3f2e638f3
 //@BindingAdapter("android:onClick")
 fun setDebouncedListener(view: Button, onClickListener: View.OnClickListener) {
-    val clickWithDebounce: (view: View) -> Unit = debounce(scope = MainScope()) {
+    val clickWithDebounce: (view: View) -> Unit = debounce {
         onClickListener.onClick(it)
     }
     view.setOnClickListener(clickWithDebounce)
@@ -16,7 +16,7 @@ fun setDebouncedListener(view: Button, onClickListener: View.OnClickListener) {
 
 fun <T> debounce(
     delayMillis: Long = 500L,
-    scope: CoroutineScope,
+    scope: CoroutineScope = MainScope(),
     action: (T) -> Unit
 ): (T) -> Unit {
     var debounceJob: Job? = null
