@@ -39,6 +39,7 @@
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 
+    <!-- Button styles https://stackoverflow.com/questions/26346727/android-material-design-button-styles-->
     <style name="AppTheme.RaiseButton" parent="@style/Widget.MaterialComponents.Button"><!-- defStyleAttr: Int = R.attr.materialButtonStyle -->
         <item name="cornerRadius">20dp</item>
     </style>
